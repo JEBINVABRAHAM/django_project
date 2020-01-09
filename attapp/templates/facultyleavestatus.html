@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+     <head>
+			<title>signup</title>{% load static %}
+			  
+		    {% load static %}
+			<link rel="stylesheet" href="{% static 'css/style2.css'%}">
+			
+	<style> 
+		
+	</style>
+	        
+	</head>
+<body class="a">
+
+
+	<div class="abc">
+		<ul>
+			<li><a href="{%url 'facultyhome'%}">HOME</a></li>
+			<li>
+				<form name="signup" action="{%url 'signout'%}" method="POST">
+					{% csrf_token %}
+					<input type="submit"  class="frm1" value="SIGN OUT" name="signout"> 
+				</form>
+				</li>
+		</ul>
+	</div>
+
+
+
+	<div style="display:inline-flex">
+          <div class="form">
+			  <ul>
+					<li><a href="{%url 'facultydetails'%}">MY PROFILE</a></li> 
+					<li><a href="{%url 'facultyhome'%}">ATTENDANCE</a></li>
+					<li><a href="{%url 'facultyhome'%}">STUDENT DETAILS</a>
+						<div class="submenu1">
+							<ul>
+								<li><a href="{%url 'fstuddetails'%}">PERSONAL DETAILS</a></li>
+								<li><a href="{%url 'facstudattendance'%}">ADD ATTENDANCE</a></li>
+								<li><a href="{%url 'facmarks'%}">ADD MARKS</a></li>
+							</ul>
+							
+					   </div>
+					   </li>
+					<li><a href="{%url 'allstudmarks'%}">VIEW MARKS</a></li>
+					<li><a href="{%url 'timetable'%}">TIME TABLE</a></li>
+					<li><a href="{%url 'studentleave'%}">LEAVE APPLICATION</a></li>   
+					<li><a href="{%url 'studentleave'%}">LEAVE STATUS</a></li>    
+	</div>	
+	<div class="form5">
+			
+		<table>	
+
+			<tr>
+				<td style="padding:20px">Name</td>
+				<td style="padding:20px">From Date</td>
+				<td style="padding:20px">To Date</td>
+				<td style="padding:20px">Status</td>
+			</tr>
+			{%if authors%}
+			{%for i in authors%}
+
+
+			<tr>
+				<td>{{i.username}}</td>		
+				<td>{{i.fromdate}}</td>	
+				<td>{{i.todate}}</td>
+				<td>{{i.status}}</td>	
+			</tr>
+			
+		{%endfor %}
+		{%endif %}
+		</table>
+ </div>		
+</div>
+
+
+
+
+
+
+
+
+
+		<div class="ft">
+      <footer>
+	           <p>&copy 2018-2019 company ltd<p>
+	  
+	  </footer>
+ </div> 
+</body>
+</html>		

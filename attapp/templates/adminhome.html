@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+     <head>
+			<title>signup</title>{% load static %}
+			  
+		    {% load static %}
+			<link rel="stylesheet" href="{% static 'css/style2.css'%}">
+			
+	<style> 
+		
+	</style>
+	        
+	</head>
+<body class="a">
+
+
+	<div class="abc">
+		<ul>
+			<li><a href="{%url 'adminhome'%}">HOME</a></li>
+			<li>
+				
+				<form name="signup" action="{%url 'signout'%}" method="POST">
+					{% csrf_token %}
+					<input type="submit"  class="frm1" value="SIGN OUT" name="signout"> 
+				</form>
+				</li>
+		</ul>
+	</div>
+          <div class="form">
+			  <ul>
+					<li><a href="{%url 'facultysignup'%}">FACULTY REGISTRATION</a></li> 
+					<li><a href="{%url 'studentsignup'%}">STUDENT REGISTRATION</a></li>
+					<li><a href="{%url 'adminhome'%}">FACULTY DETAILS</a>
+						<div class="submenu1">
+							<ul>
+								<li><a href="{%url 'allfaculty'%}">PERSONAL DETAILS</a></li>
+								<li><a href="{%url 'facultyattendance'%}">ATTENDANCE</a></li>
+								
+							</ul>
+							
+					   </div>
+					   </li>
+
+
+
+					<li><a href="{%url 'adminhome'%}">STUDENT DETAILS</a>
+						<div class="submenu1">
+							<ul>
+								<li><a href="{%url 'allstudent'%}">PERSONAL DETAILS</a></li>
+								<li><a href="{%url 'studentattendance'%}">ATTENDANCE</a></li>
+								<li><a href="{%url 'admarks'%}">MARKS</a></li>
+							</ul>
+							
+					   </div>
+					   </li>
+				
+					<li><a href="{%url 'timetable'%}">TIME TABLE</a></li> 
+					<li><a href="{%url 'adminleave'%}">LEAVE MANAGEMENT</a>
+						<div class="submenu3">
+							<ul>
+								<li><a href="{%url 'adminfacleave'%}">FACULTY LEAVE</a></li>
+								<li><a href="{%url 'adminleave'%}">STUDENT LEAVE</a></li>
+						
+							</ul>
+							
+					   </div>
+					   </li>
+				
+					
+					
+					</li>    
+	</div>	
+		<div class="ft">
+      <footer>
+	           <p>&copy 2018-2019 company ltd<p>
+	  
+	  </footer>
+ </div> 
+</body>
+</html>		

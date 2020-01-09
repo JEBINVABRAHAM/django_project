@@ -1,0 +1,135 @@
+*
+{
+	margin:0px;
+	padding:0px;
+}
+
+.a
+{
+    background-image:url("../img/001.jpg");
+	background-size:cover;
+	
+
+
+
+}
+
+  .form
+{
+	width:290px;
+	padding:10px;
+	height:600px;
+	background-color:rgba(0,0,0,0.7);
+	text-align:justify;
+	
+	
+	
+}
+.form ul li
+{
+  padding:20px;
+  list-style: none;
+  
+}
+
+.abc
+{
+	text-align:right;
+	padding:20px;
+	background-color: black;
+}
+.abc ul li
+{
+display:inline-flex;
+padding:20px;	
+}
+
+.abc ul li a{
+	color:white;
+	text-decoration: none;
+}
+
+.abc ul li:hover
+{
+	background-color: grey;
+
+}
+
+
+
+.form ul li a
+{
+  text-decoration: none;
+  color:white;
+  padding:20px;
+
+}
+.form ul li:hover
+{
+	background-color: grey;
+}
+
+.frm
+{
+  padding:20px;
+  margin:20px;
+  background-color:rgba(0,0,0,0.5);
+  outline:none;
+  color:white;
+  border-radius:10px;
+  
+
+} 
+.form1
+{
+	width:300px;
+	padding:40px;
+	margin:40px;
+	height:450px;
+    background-color:rgba(0,0,0,0.5);
+	position:relative;
+	left:450px;
+	text-align:center;
+    border-radius:30px;
+}
+.submenu
+  {  
+      display:none;
+	  z-index:1;
+  }
+  .form ul li:hover .submenu
+  {
+	  display:inline;
+	  background-color:rgba(0,0,0,0.5);
+	  position:absolute;
+	  margin-left:95px;
+	  top:220px;
+	  
+	  
+  }
+
+
+
+
+
+.ft
+{
+	background-color:black;
+	text-align:center;
+	color:white;
+	padding:30px;
+
+}
+
+.col
+{
+	color:white;
+		
+}
+
+.col a
+{
+	
+	text-decoration:none;
+	color:red;
+}

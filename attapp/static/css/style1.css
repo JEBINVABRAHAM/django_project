@@ -1,0 +1,96 @@
+*
+{
+	margin:0px;
+	padding:0px;
+}
+
+.a
+{
+    background-image:url("../img/1115.jpg");
+	background-size:cover;
+	
+
+
+
+}
+
+
+
+
+.form
+{
+	width:420px;
+	padding:30px;
+	margin:30px;
+	height:500px;
+	background-color:rgba(0,0,0,0.7);
+	position:relative;
+	left:450px;
+	text-align:center;
+	border-radius:30px;
+	
+	
+}
+.form ul li
+{
+  padding:30px;
+  margin:30px;
+  list-style: none;
+  border-radius: 50px;
+}
+
+.form ul li a
+{
+  text-decoration: none;
+  color:white;
+
+}
+.form ul li:hover
+{
+	background-color: grey;
+}
+
+.frm
+{
+  padding:20px;
+  margin:20px;
+  background-color:rgba(0,0,0,0.5);
+  outline:none;
+  color:white;
+  border-radius:10px;
+  
+
+} 
+.form1
+{
+	width:300px;
+	padding:40px;
+	margin:40px;
+	height:450px;
+    background-color:rgba(0,0,0,0.5);
+	position:relative;
+	left:450px;
+	text-align:center;
+    border-radius:30px;
+}
+.ft
+{
+	background-color:black;
+	text-align:center;
+	color:white;
+	padding:30px;
+
+}
+
+.col
+{
+	color:white;
+		
+}
+
+.col a
+{
+	
+	text-decoration:none;
+	color:red;
+}

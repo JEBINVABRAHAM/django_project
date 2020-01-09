@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+     <head>
+			<title>signup</title>{% load static %}
+			  
+		    {% load static %}
+			<link rel="stylesheet" href="{% static 'css/style2.css'%}">
+			
+	<style> 
+		
+	</style>
+	        
+	</head>
+<body class="a">
+
+
+	<div class="abc">
+		<ul>
+			<li><a href="{%url 'studenthome'%}">HOME</a></li>
+			<li>
+				<form name="signup" action="{%url 'signout'%}" method="POST">
+					{% csrf_token %}
+					<input type="submit"  class="frm1" value="SIGN OUT" name="signout"> 
+				</form>
+				</li>
+		</ul>
+	</div>
+	<div style="display:inline-flex">
+          <div class="form">
+			    <ul>
+					<li><a href="{%url 'studentdetails'%}">MY PROFILE</a></li> 
+					<li><a href="{%url 'stuattendance'%}">ATTENDANCE</a></li> 
+				    <li><a href="{%url 'studmarks'%}">MARKS</a></li>
+					<li><a href="{%url 'timetable'%}">TIME TABLE</a></li>
+								
+				</ul>
+				</div>	
+				
+  					   <div class="form5">
+						{%if authors%}
+						{%for i in authors%}
+						<table>
+				
+						<tr>
+							<td>STD ID</td>
+							<td><input class="frm1"type="text" value="{{i.studentid}}"></td><br>
+						</tr>
+						<tr>
+							<td>NAME</td>
+							<td><input class="frm1" type="text" value="{{i.username}}"></td>
+						</tr>
+
+
+						<tr>
+				        	<td>SUB-1</td>
+							<td><input class="frm1" type="text" value="{{i.sub1}}"></td>
+						</tr>
+						<tr>
+							<td>SUB-2</td>
+							<td><input class="frm1" type="text" value="{{i.sub2}}"></td>
+						
+						</tr>
+						<tr>
+							<td>SUB-3</td>
+							<td><input class="frm1" type="text" value="{{i.sub3}}"></td>
+						</tr>
+						<tr>
+							<td>PERCENTAGE</td>
+							<td><input class="frm1" type="text" value="{{i.percentage}}"></td>
+						</tr>
+					
+						
+					</table>
+					    {%endfor %}
+						{%endif %}
+						
+					</div>	
+				
+				</div>
+				
+				
+
+
+
+
+
+
+
+		<div class="ft">
+      <footer>
+	           <p>&copy 2018-2019 company ltd<p>
+	  
+	  </footer>
+ </div> 
+</body>
+</html>		

@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+     <head>
+			<title>signup</title>{% load static %}
+			  
+		    {% load static %}
+			<link rel="stylesheet" href="{% static 'css/style2.css'%}">
+			
+	<style> 
+		
+	</style>
+	        
+	</head>
+<body class="a">
+
+
+	<div class="abc">
+		<ul>
+			<li><a href="{%url 'facultyhome'%}">HOME</a></li>
+			<li>
+				<form name="signup" action="{%url 'signout'%}" method="POST">
+					{% csrf_token %}
+					<input type="submit"  class="frm1" value="SIGN OUT" name="signout"> 
+				</form>
+				</li>
+		</ul>
+	</div>
+
+
+		<div style="display:inline-flex">
+          <div class="form">
+			  <ul>
+					<li><a href="{%url 'facultydetails'%}">MY PROFILE</a></li> 
+					<li><a href="{%url 'facultystudattendance'%}">STUDENT ATTENDANCE</a></li>
+					<li><a href="{%url 'facultyhome'%}">STUDENT DETAILS</a>
+						<div class="submenu1">
+							<ul>
+								<li><a href="{%url 'fstuddetails'%}">PERSONAL DETAILS</a></li>
+								<li><a href="{%url 'facstudattendance'%}"> ADD ATTENDANCE</a></li>
+								<li><a href="{%url 'facmarks'%}">ADD MARKS</a></li>
+							</ul>
+							
+					   </div>
+					   </li>
+					<li><a href="{%url 'allstudmarks'%}">VIEW MARKS</a></li>
+					<li><a href="#">TIME TABLE</a></li>    
+	</div>
+	
+	<div class="form6" style="padding:20px;margin-left:20px">
+		<h1>Student Details</h1>					
+		<table>	
+			<tr>
+				<th style="padding:10px">Student Id</th>
+				<th style="padding:10px">Name</th>
+				<th style="padding:10px">Batch</th>
+		
+
+			</tr>
+			{%if authors%}
+		    {%for i in authors%}
+			<tr>
+				<td>{{i.studentid}}</td>
+				<td>{{i.username}}</td>
+	
+				<td>{{i.batch}}</td>
+
+			</tr>
+			{%endfor %}
+		    {%endif %}
+				
+			</table>	
+		</form>
+		</div>
+
+		<div class="form6" style="padding:20px;margin-left:100px">
+			<form name="signup" action="{%url 'sssubmits'%}" method="POST">
+			{% csrf_token %}
+								
+			<table>	
+				<tr>
+					<td>Student Id</td>
+					<td><input type="text" class="frm1" name="studentid"></td>
+				</tr>
+				<tr>
+					<td>Student Name</td>
+					<td><input type="text" class="frm1" name="username"></td>
+				</tr>
+				<tr>
+					<td>Assesment No</td>
+					<td><input type="text" class="frm1" name="assesmentno"></td>
+				</tr>
+				<tr>
+					<td>Sub1</td>
+					<td><input type="text" class="frm1" name="sub1"></td> </td>
+				</tr>
+				<tr>
+					<td>sub2</td>
+					<td> <input type="text" class="frm1"  name="sub2"> </td>
+				</tr>
+				<tr>
+					<td>sub3</td>
+					<td><input type="text" class="frm1"  name="sub3"></td>
+	
+				</tr>
+				<tr>
+					<td>Percentage</td>
+					<td><input type="text" class="frm1"  name="percentage"></td>
+	
+				</tr>
+				
+				<tr>
+					<td><input type="submit" name="submit" class="frm1" value="Add Marks"><br> </td>
+				</tr>	
+				</table>	
+			</form>
+			</div>
+		<
+
+
+
+
+
+
+	</div>
+
+
+
+
+		<div class="ft">
+      <footer>
+	           <p>&copy 2018-2019 company ltd<p>
+	  
+	  </footer>
+ </div> 
+</body>
+</html>		

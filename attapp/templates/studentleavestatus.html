@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+     <head>
+			<title>signup</title>{% load static %}
+			  
+		    {% load static %}
+			<link rel="stylesheet" href="{% static 'css/style2.css'%}">
+			
+	<style> 
+		
+	</style>
+	        
+	</head>
+<body class="a">
+
+
+	<div class="abc">
+		<ul>
+			<li><a href="{%url 'studenthome'%}">HOME</a></li>
+			<li>
+				<form name="signup" action="{%url 'signout'%}" method="POST">
+					{% csrf_token %}
+					<input type="submit"  class="frm1" value="SIGN OUT" name="signout"> 
+				</form>
+				</li>
+		</ul>
+	</div>
+
+		<div style="display:inline-flex">
+          <div class="form">
+			  <ul>
+					<li><a href="{%url 'studentdetails'%}">MY PROFILE</a></li> 
+					<li><a href="{%url 'stuattendance'%}">ATTENDANCE</a></li> 
+				    <li><a href="{%url 'studmarks'%}">MARKS</a></li>
+					<li><a href="{%url 'timetable'%}">TIME TABLE</a></li>
+					<li><a href="{%url 'studentleave'%}">LEAVE APPLICATION</a></li>
+			  </ul>
+							
+		   </div>
+				   
+		   
+		   <div class="form5">
+			
+			<table>	
+
+				<tr>
+					<td style="padding:10px">Name</td>
+					<td style="padding:10px">Batch</td>
+					<td style="padding:10px">From Date</td>
+					<td style="padding:10px">To Date</td>
+					<td style="padding:10px">Status</td>
+				</tr>
+				{%if authors%}
+				{%for i in authors%}
+
+
+				<tr>
+					<td>{{i.username}}</td>	
+					<td>{{i.batch}}</td>	
+					<td>{{i.fromdate}}</td>	
+					<td>{{i.todate}}</td>
+					<td>{{i.status}}</td>	
+				</tr>
+				
+			{%endfor %}
+			{%endif %}
+			</table>
+	 </div>		
+</form>
+</div>
+
+
+
+
+
+				
+					
+		<div class="ft">
+      <footer>
+	           <p>&copy 2018-2019 company ltd<p>
+	  
+	  </footer>
+ </div> 
+</body>
+</html>		

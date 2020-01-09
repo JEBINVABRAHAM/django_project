@@ -1,0 +1,189 @@
+*
+{
+	margin:0px;
+	padding:0px;
+}
+
+.a
+{
+    background-image:url("../img/002.jpg");
+	background-size:cover;
+
+
+
+}
+.form
+{
+	width:420px;
+	padding:30px;
+	margin:10px;
+	margin-left:150px;
+	background-color:rgba(0,0,0,0.7);
+	border-radius:30px;
+	text-align:justify;
+	
+	
+	
+}
+.form2
+{
+	width:350px;
+	padding:20px;
+	background-color:rgba(0,0,0,0.7);
+	text-align: center;
+	
+}
+.form2 ul li
+{
+  padding:20px;
+  margin:30px;
+  list-style:none;
+  border-radius:20px;
+
+}
+.form2 ul li:hover
+{
+	background-color: grey;
+}
+
+.submenu
+  {  
+      display:none;
+	  z-index:1;
+  }
+  .form2 ul li:hover .submenu
+  {
+	  display:inline-flex;
+	  background-color:rgba(0,0,0,0.7);
+	  position:absolute;
+	  left:340px;
+	  border-radius:40px;
+	  top:300px;
+	  
+	  
+  }
+
+.abc
+{
+	text-align:right;
+	padding:20px;
+	background-color:rgba(0,0,0,0.8);
+
+
+	
+	
+
+}
+.abc ul li
+{
+display:inline-flex;
+padding:20px;	
+}
+
+.abc ul li:hover
+{
+	background-color: grey;
+	border-radius:20px;
+}
+
+.frm
+{
+  padding:10px;
+  margin:10px;
+  background-color:rgba(0,0,0,0.5);
+  outline:none;
+  color:white;
+  border-radius:10px;
+  
+ 
+
+}
+
+.bca
+{
+	text-align:right;
+	padding:20px;
+	background-color: black;
+}
+.bca ul li
+{
+display:inline-flex;
+padding:20px;	
+}
+
+.bca ul li a{
+	color:white;
+	text-decoration: none;
+}
+
+.bca ul li:hover
+{
+	background-color: grey;
+	border-radius:20px;
+}
+
+
+
+.form1
+{
+	width:300px;
+	padding:40px;
+	margin:40px;
+	height:450px;
+    background-color:rgba(0,0,0,0.5);
+	position:relative;
+	left:450px;
+	text-align:center;
+    border-radius:30px;
+}
+.form3
+{
+	width:300px;
+	padding:50px;
+	margin:50px;
+	height:450px;
+    background-color:rgba(0,0,0,0.5);
+	position:relative;
+	left:450px;
+	text-align:center;
+    border-radius:30px;
+}
+.frm1
+{
+  padding:30px;
+  margin:40px;
+  background-color:rgba(0,0,0,0.5);
+  outline:none;
+  color:white;
+  border-radius:10px;
+  border:none;
+
+}
+
+
+
+
+.ft
+{
+	
+	background-color:black;
+	text-align:center;
+	color:white;
+	padding:30px;
+
+
+
+}
+
+.col
+{
+	color:white;
+		
+}
+
+.col a
+{
+	
+	text-decoration:none;
+	color:red;
+}

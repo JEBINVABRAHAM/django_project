@@ -1,0 +1,255 @@
+*
+{
+	margin:0px;
+	padding:0px;
+}
+
+.a
+{
+    background-image:url("../img/001.jpg");
+	background-size:cover;
+	
+
+
+
+}
+
+.form5
+{
+	width:440px;
+	padding:10px;
+	margin:10px;
+	margin-left:150px;
+	background-color:rgba(0,0,0,0.7);
+	border-radius:30px;
+	text-align:justify;
+	color:white;
+	
+	
+	
+}
+
+.form6
+{
+
+	padding:10px;
+	margin:10px;
+	margin-left:10px;
+	border-radius:10px;
+	text-align:center;
+	background-color: rgba(0,0,0,0.5);
+	color:white;
+	
+	
+	
+}
+
+
+  .form
+{
+	width:250px;
+	padding:10px;
+	height:650px;
+	background-color:rgba(0,0,0,0.7);
+	text-align:left;
+	
+	
+	
+}
+
+
+
+
+
+.form ul li
+{
+  padding:20px;
+  margin:30px;
+  list-style: none;
+  border-radius: 20px;
+}
+
+.abc
+{
+	
+	text-align:right;
+	padding:20px;
+	background-color: black;
+	
+}
+.abc ul li
+{
+display:inline-flex;
+padding:20px;	
+}
+
+.abc ul li a{
+	color:white;
+	text-decoration: none;
+}
+
+.abc ul li:hover
+{
+	background-color: grey;
+	border-radius:20px;
+}
+
+
+
+.form ul li a
+{
+  text-decoration: none;
+  color:white;
+
+}
+.form ul li:hover
+{
+	background-color: grey;
+}
+
+.frm
+{
+  padding:20px;
+  margin:20px;
+  background-color:rgba(0,0,0,0.5);
+  outline:none;
+  color:white;
+  border-radius:10px;
+  
+
+} 
+
+.frm1
+{
+  padding:10px;
+  margin:10px;
+  background-color:rgba(0,0,0,0.5);
+  outline:none;
+  color:white;
+  border-radius:10px;
+  
+
+} 
+
+.frm3
+{
+  padding:1px;
+  margin:1px;
+  background-color:rgba(0,0,0,0.5);
+  outline:none;
+  color:white;
+  border-radius:10px;
+  
+
+} 
+
+
+
+
+
+
+
+.form1
+{
+	width:300px;
+	padding:40px;
+	margin:40px;
+	height:450px;
+    background-color:rgba(0,0,0,0.5);
+	position:relative;
+	left:450px;
+	text-align:center;
+    border-radius:30px;
+}
+.submenu
+  {  
+      display:none;
+	  z-index:1;
+  }
+  .form ul li:hover .submenu
+  {
+	  display:inline;
+	  background-color:rgba();
+	  position:absolute;
+	  left:340px;
+	  border-radius:40px;
+	  top:200px;
+	  
+	  
+  }
+  .submenu1
+  {  
+      display:none;
+	  z-index:1;
+  }
+  .form ul li:hover .submenu1
+  {
+	  display:inline;
+	  background-color:rgba(0,0,0,0.9);
+	  position:absolute;
+	  left:230px;
+	  border-radius:40px;
+	  top:300px;
+	  
+	  
+  }
+
+
+  .submenu3
+  {  
+      display:none;
+	  z-index:1;
+  }
+  .form ul li:hover .submenu3
+  {
+	  display:inline;
+	  background-color:rgba(0,0,0,0.9);
+	  position:absolute;
+	  left:230px;
+	  border-radius:40px;
+	  top:500px;
+	  
+	  
+  }
+
+ 
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+.ft
+{
+    
+	background-color:black;
+	text-align:center;
+	color:white;
+	padding:30px;
+	
+}
+
+
+
+
+
+.col
+{
+	color:white;
+		
+}
+
+.col a
+{
+	
+	text-decoration:none;
+	color:red;
+}

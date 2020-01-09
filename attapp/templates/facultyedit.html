@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+     <head>
+			<title>signup</title>
+			  
+		    {% load static %}
+			<link rel="stylesheet" href="{% static 'css/style2.css'%}">
+			
+	<style> 
+		table{color:white;}
+	</style>
+	        
+	</head>
+<body class="a">
+
+
+	<div class="abc">
+		<ul>
+			<li><a href="{%url 'facultyhome'%}">HOME</a></li>
+			<li>
+				<form name="signup" action="{%url 'signout'%}" method="POST">
+					{% csrf_token %}
+					<input type="submit"  class="frm1" value="SIGN OUT" name="signout"> 
+				</form>
+				</li>
+		</ul>
+	</div>
+
+	<div style="display:inline-flex">
+
+          <div class="form">
+			  <ul>
+					 
+					<li><a href="{%url 'facultydetails'%}">MY PROFILE</a></li>
+					<li><a href="{%url 'facultystudattendance'%}">STUDENT ATTENDANCE</a></li>	
+					<li><a href="{%url 'facultyhome'%}">STUDENT DETAILS</a>
+						<div class="submenu1">
+							<ul>
+								<li><a href="{%url 'fstuddetails'%}">PERSONAL DETAILS</a></li>
+								<li><a href="{%url 'studentattendance'%}">ADD ATTENDANCE</a></li>
+								<li><a href="{%url 'facmarks'%}">ADD MARKS</a></li>
+							</ul>
+							
+					   </div>
+					   </li>
+					   <li><a href="{%url 'allstudmarks'%}">VIEW MARKS</a></li>
+					   <li><a href="#">TIME TABLE</a></li>
+					   <li><a href="{%url 'facultyleave'%}">LEAVE APPLICATION</a></li> 
+					   <li><a href="{%url 'facultyleavestatus'%}">LEAVE STATUS</a></li>
+				</div>
+
+				<div class="form5">
+					<form name="edit" action="{%url 'faced'%}" method="POST">
+						{% csrf_token %}
+					{%if authors%}
+					{%for i in authors%}
+					<table>
+
+					<tr>
+						<td>NAME</td>
+						<td><input class="frm1"type="text" value="{{i.username}}" name="username"></td><br>
+					</tr>
+					<tr>
+						<td>ADDRESS</td>
+						<td><input class="frm1" type="text" value="{{i.address}}" name="address"></td>
+					</tr>
+					<tr>
+						<td>DOB</td>
+						<td><input class="frm1" type="text" value="{{i.dob}}" name="dob"></td>
+					</tr>
+					<tr>
+						<td>GENDER</td>
+						<td><input class="frm1" type="text" value="{{i.gender}}" name="gender"></td>
+					</tr>
+					<tr>
+						<td>QUALIFICATION</td>
+						<td><input class="frm1" type="text" value="{{i.qualification}}"  name="qualification"></td>
+					</tr>
+					<tr>
+						<td>E-MAIL</td>
+						<td><input class="frm1" type="text" value="{{i.email}}" name="email"></td>
+					</tr>
+					<tr>
+						<td>BATCH IN CHARGE</td>
+						<td><input class="frm1" type="text" value="{{i.batchincharge}}" name="batchincharge"></td>
+					
+					</tr>
+					<tr>
+						<td>MOBILE NO</td>
+						<td><input class="frm1" type="text" value="{{i.mobileno}}" name="mobileno"></td>
+					</tr>
+					<tr>
+						<td>PASSWORD</td>
+						<td><input class="frm1" type="text" value="{{i.password}}" name="password"></td>
+					</tr>
+					<tr>
+						<td>
+							<input type="submit" name="submit" class="frm1" value="Save">
+						</td>
+					</tr>
+				
+
+				</table>
+					{%endfor %}
+					{%endif %}
+				</div>	
+	
+			</div>
+
+
+
+
+		<div class="ft">
+      <footer>
+	           <p>&copy 2018-2019 company ltd<p>
+	  
+	  </footer>
+ </div> 
+</body>
+</html>		

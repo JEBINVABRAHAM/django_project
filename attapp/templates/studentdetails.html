@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+     <head>
+			<title>signup</title>{% load static %}
+			  
+		    {% load static %}
+			<link rel="stylesheet" href="{% static 'css/style2.css'%}">
+			
+	<style> 
+		
+	</style>
+	        
+	</head>
+<body class="a">
+
+
+	<div class="abc">
+		<ul>
+			<li><a href="{%url 'studenthome'%}">HOME</a></li>
+			<li>
+				
+				<form name="signup" action="{%url 'signout'%}" method="POST">
+					{% csrf_token %}
+					<input type="submit"  class="frm1" value="SIGN OUT" name="signout"> 
+				</form>
+				</li>
+		</ul>
+	</div>
+	<div style="display:inline-flex">
+          <div class="form">
+			  <ul>
+					
+					<li><a href="{%url 'studentdetails'%}">MY PROFILE</a></li>
+					<li><a href="{%url 'studentdetails'%}">ATTENDANCE</a></li>
+					<li><a href="{%url 'studmarks'%}">MARKS</a></li>   
+					<li><a href="{%url 'studentdetails'%}">TIME TABLE</a></li>  
+					</ul>  
+	</div>
+	<div class="form5">
+		<form name="edit" action="{%url 'studedits'%}" method="POST">
+			{% csrf_token %}
+		{%if authors%}
+		{%for i in authors%}
+		<table>
+
+		<tr>
+			<td>NAME</td>
+			<td><input class="frm1"type="text" value="{{i.username}}"></td><br>
+		</tr>
+		<tr>
+			<td>ADDRESS</td>
+			<td><input class="frm1" type="text" value="{{i.address}}"></td>
+		</tr>
+		<tr>
+			<td>DOB</td>
+			<td><input class="frm1" type="text" value="{{i.dob}}"></td>
+		</tr>
+		<tr>
+			<td>GENDER</td>
+			<td><input class="frm1" type="text" value="{{i.gender}}"></td>
+		</tr>
+		<tr>
+			<td>ADMISSION DATE</td>
+			<td><input class="frm1" type="text" value="{{i.admissiondate}}"></td>
+		</tr>
+
+
+		<tr>
+			<td>GUARDIAN</td>
+			<td><input class="frm1" type="text" value="{{i.guardian}}"></td>
+		</tr>
+		<tr>
+			<td>E-MAIL</td>
+			<td><input class="frm1" type="text" value="{{i.email}}"></td>
+		</tr>
+		<tr>
+			<td>BATCH</td>
+			<td><input class="frm1" type="text" value="{{i.batch}}"></td>
+		
+		</tr>
+		<tr>
+			<td>MOBILE NO</td>
+			<td><input class="frm1" type="text" value="{{i.mobileno}}"></td>
+		</tr>
+		<tr>
+			<td>PASSWORD</td>
+			<td><input class="frm1" type="text" value="{{i.password}}"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" class="frm1"  value="Edit"></td>
+		</tr>
+	
+
+	</table>
+		{%endfor %}
+		{%endif %}
+	</div>	
+
+</div>
+
+
+
+
+
+		<div class="ft">
+      <footer>
+	           <p>&copy 2018-2019 company ltd<p>
+	  
+	  </footer>
+ </div> 
+</body>
+</html>		

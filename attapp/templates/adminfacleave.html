@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+     <head>
+			<title>signup</title>{% load static %}
+			  
+		    {% load static %}
+			<link rel="stylesheet" href="{% static 'css/style2.css'%}">
+			
+	<style> 
+		
+	</style>
+	        
+	</head>
+<body class="a">
+
+
+	<div class="abc">
+		<ul>
+			<li><a href="{%url 'adminhome'%}">HOME</a></li>
+			<li>
+				
+				
+				<form name="signup" action="{%url 'signout'%}" method="POST">
+					{% csrf_token %}
+					<input type="submit"  class="frm1" value="SIGN OUT" name="signout"> 
+				</form>
+				</li>
+		</ul>
+	</div>
+
+
+		<div style="display:inline-flex">
+          <div class="form">
+			  <ul>
+					<li><a href="{%url 'facultysignup'%}">FACULTY REGISTRATION</a></li> 
+					<li><a href="{%url 'studentsignup'%}">STUDENT REGISTRATION</a></li>
+					<li><a href="{%url 'adminhome'%}">FACULTY DETAILS</a>
+						<div class="submenu1">
+							<ul>
+								<li><a href="{%url 'allfaculty'%}">PERSONAL DETAILS</a></li>
+								<li><a href="{%url 'facultyattendance'%}">ATTENDANCE</a></li>
+								
+							</ul>
+							
+					   </div>
+					   </li>
+
+
+
+					<li><a href="{%url 'adminhome'%}">STUDENT DETAILS</a>
+						<div class="submenu1">
+							<ul>
+								<li><a href="{%url 'allstudent'%}">PERSONAL DETAILS</a></li>
+								<li><a href="{%url 'studentattendance'%}">ATTENDANCE</a></li>
+								<li><a href="{%url 'admarks'%}">MARKS</a></li>
+							</ul>
+							
+					   </div>
+					   </li>
+				
+					<li><a href="{%url 'timetable'%}">TIME TABLE</a></li> 
+					<li><a href="{%url 'adminleave'%}">LEAVE APPLICATIONS</a></li>    
+	</div>	
+	<div class="form6">
+		
+		<tr>	
+			<table>
+	
+			<tr>
+				<td style="padding:10px">NAME</td>
+				<td style="padding:10px">FROM-DATE</td>
+				<td style="padding:10px">TO-DATE</td>
+				<td style="padding:10px">REASON</td>
+				<td style="padding:10px">STATUS</td>
+			</tr>
+			{%if authors%}
+			{%for i in authors%}
+			<tr>
+				<td>{{i.username}}</td>
+				<td>{{i.fromdate}}</td>
+				<td>{{i.todate}}</td>
+				<td>{{i.reason}}</td>
+				<td>{{i.status}}</td>
+			</tr>
+		
+			{%endfor %}
+			{%endif %}
+		</table>
+			
+		</div>	
+
+
+		<div> 
+			<form action="{%url 'approved'%}" method="POST">
+			{% csrf_token %}
+			<input type="text" class="frm1" placeholder="enter the name" name="username">
+			<input type="submit" class="frm1" value="approve">
+</form>
+
+		</div>
+
+
+
+	
+	</div>
+
+			
+	
+
+
+
+
+
+		<div class="ft">
+      <footer>
+	           <p>&copy 2018-2019 company ltd<p>
+	  
+	  </footer>
+ </div> 
+</body>
+</html>		

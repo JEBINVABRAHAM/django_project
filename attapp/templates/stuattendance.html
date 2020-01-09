@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+     <head>
+			<title>signup</title>{% load static %}
+			  
+		    {% load static %}
+			<link rel="stylesheet" href="{% static 'css/style2.css'%}">
+			
+	<style> 
+	tr,td{padding:10px;
+		
+	}
+		
+	</style>
+	        
+	</head>
+<body class="a">
+
+
+	<div class="abc">
+		<ul>
+			<li><a href="{%url 'studenthome'%}">HOME</a></li>
+			<li>
+				<form name="signup" action="{%url 'signout'%}" method="POST">
+					{% csrf_token %}
+					<input type="submit"  class="frm1" value="SIGN OUT" name="signout"> 
+				</form>
+				</li>
+		</ul>
+	</div>
+	<div style="display:inline-flex">
+          <div class="form">
+			    <ul>
+					<li><a href="{%url 'studentdetails'%}">MY PROFILE</a></li> 
+					<li><a href="{%url 'studenthome'%}">ATTENDANCE</a></li> 
+				    <li><a href="{%url 'studenthome'%}">MARKS</a></li>
+					<li><a href="{%url 'timetable'%}">TIME TABLE</a></li>
+								
+				</ul>
+				</div>	
+				
+  					   <div class="form5">
+						{%if authors%}
+						{%for i in authors%}
+						<table>
+				
+						<tr>
+							<td>STD ID</td>
+							<td>NAME</td>
+							<td>DATE</td>
+							<td>Hour-1</td>
+							<td>Hour-2</td>
+							<td>Hour-3</td>
+							<td>Hour-4</td>
+						</tr>	
+						<tr>
+							<td>{{i.studentid}}</td>
+							<td>{{i.username}}</td>
+							<td>{{i.date}}</td>
+							<td>{{i.status_hour1}}</td>
+							<td>{{i.status_hour2}}</td>
+							<td>{{i.status_hour3}}</td>
+							<td>{{i.status_hour4}}</td>
+						</tr>
+						
+							
+					
+						
+					</table>
+					    {%endfor %}
+						{%endif %}
+						
+					</div>	
+				
+				</div>
+				
+				
+
+
+
+
+
+
+
+		<div class="ft">
+      <footer>
+	           <p>&copy 2018-2019 company ltd<p>
+	  
+	  </footer>
+ </div> 
+</body>
+</html>		

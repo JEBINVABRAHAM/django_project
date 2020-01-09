@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+     <head>
+			<title>signup</title>{% load static %}
+			  
+		    {% load static %}
+			<link rel="stylesheet" href="{% static 'css/style2.css'%}">
+			
+	<style> 
+	table,tr,td{border:1px solid black;
+				border-collapse:collapse;			
+	}
+		
+	</style>
+	        
+	</head>
+<body class="a">
+
+
+	<div class="abc">
+		<ul>
+			<li><a href="{%url 'adminhome'%}">HOME</a></li>
+			<li>
+				
+				<form name="signup" action="{%url 'signout'%}" method="POST">
+					{% csrf_token %}
+					<input type="submit"  class="frm1" value="SIGN OUT" name="signout"> 
+				</form>
+				</li>
+		</ul>
+	</div>
+
+		<div style="display:inline-flex">
+          <div class="form">
+			  <ul>
+					<li><a href="{%url 'facultysignup'%}">FACULTY REGISTRATION</a></li> 
+					<li><a href="{%url 'studentsignup'%}">STUDENT REGISTRATION</a></li>
+					<li><a href="{%url 'studentsignup'%}">FACULTY DETAILS</a>
+						<div class="submenu1">
+							<ul>
+								<li><a href="{%url 'allfaculty'%}">PERSONAL DETAILS</a></li>
+								<li><a href="{%url 'adminhome'%}">ATTENDANCE</a></li>
+								
+							</ul>
+							
+					   </div>
+					   </li>
+
+
+
+					<li><a href="{%url 'studentsignup'%}">STUDENT DETAILS</a>
+						<div class="submenu1">
+							<ul>
+								<li><a href="{%url 'allstudent'%}">PERSONAL DETAILS</a></li>
+								<li><a href="{%url 'studentattendance'%}">ATTENDANCE</a></li>
+								<li><a href="#">MARKS</a></li>
+							</ul>
+							
+					   </div>
+					   </li>
+				
+					<li><a href="{%url 'timetable'%}">TIME TABLE</a></li>    
+	</div>	
+	<div class="form6">
+		
+	<tr>	
+		<table class="form6">
+
+		<tr>
+			<td>FACULTYID</td>
+			<td>NAME</td>
+			<td>ADDRESS</td>
+			<td>DOB</td>
+			<td>GENDER</td>
+			<td>QUALIFICATION</td>
+			<td>E-MAIL</td>
+			<td>BATCH IN CHARGE</td>
+			<td>MOBILE NO</td>
+		</tr>
+		{%if authors%}
+		{%for i in authors%}
+		<tr>
+			<td>{{i.facultyid}}</td>
+			<td>{{i.username}}</td>
+			<td>{{i.address}}</td>
+			<td>{{i.dob}}</td>
+			<td>{{i.gender}}</td>
+			<td>{{i.qualification}}</td>
+			<td>{{i.email}}</td>
+			<td>{{i.batchincharge}}</td>
+			<td>{{i.mobileno}}</td>
+		</tr>
+	
+		{%endfor %}
+		{%endif %}
+	</table>
+		
+	</div>	
+
+</div>
+
+
+
+
+
+
+
+		<div class="ft">
+      <footer>
+	           <p>&copy 2018-2019 company ltd<p>
+	  
+	  </footer>
+ </div> 
+</body>
+</html>		

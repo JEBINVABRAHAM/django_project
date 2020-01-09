@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+     <head>
+			<title>signup</title>{% load static %}
+			  
+		    {% load static %}
+			<link rel="stylesheet" href="{% static 'css/style2.css'%}">
+			
+	<style> 
+		
+	</style>
+	        
+	</head>
+<body class="a">
+
+
+	<div class="abc">
+		<ul>
+			<li><a href="{%url 'adminhome'%}">HOME</a></li>
+			<li>
+				<form name="signup" action="{%url 'signout'%}" method="POST">
+					{% csrf_token %}
+					<input type="submit"  class="frm1" value="SIGN OUT" name="signout"> 
+				</form>
+				</li>
+		</ul>
+	</div>
+	<div style="display:inline-flex">
+          <div class="form">
+			  <ul>
+					<li><a href="{%url 'facultysignup'%}">FACULTY REGISTRATION</a></li> 
+					<li><a href="{%url 'studentsignup'%}">STUDENT REGISTRATION</a></li>
+					<li><a href="{%url 'studentsignup'%}">FACULTY DETAILS</a>
+						<div class="submenu1">
+							<ul>
+								<li><a href="#">PERSONAL DETAILS</a></li>
+								<li><a href="#">ATTENDANCE</a></li>
+								
+							</ul>
+							
+					   </div>
+					   </li>
+
+
+
+					<li><a href="{%url 'studentsignup'%}">STUDENT DETAILS</a>
+						<div class="submenu1">
+							<ul>
+								<li><a href="#">PERSONAL DETAILS</a></li>
+								<li><a href="#">ATTENDANCE</a></li>
+								<li><a href="#">MARKS</a></li>
+							</ul>
+							
+					   </div>
+					   </li>
+				
+					<li><a href="{%url 'studentsignup'%}">TIME TABLE</a></li>    
+	</div>	
+
+
+		<div class="form6" style="padding:20px;margin-left:100px">
+								
+			<table>	
+				<tr>
+					<td style="padding:10px">Student Id</td>
+					<td style="padding:10px">Student Name</td>
+					<td style="padding:10px">Date</td>
+					<td style="padding:10px">Hour1</td>
+					<td style="padding:10px">Hour2</td>
+					<td style="padding:10px">Hour3</td>
+					<td style="padding:10px">Hour4</td>
+					
+				</tr>
+				{%if authors%}
+				{%for i in authors%}
+				<tr>
+					<td>{{i.studentid}}</td>
+					<td>{{i.username}}</td>
+					<td>{{i.date}}</td>
+					<td>{{i.status_hour1}}</td>
+					<td>{{i.status_hour2}}</td>
+					<td>{{i.status_hour3}}</td>
+					<td>{{i.status_hour4}}</td>
+				</tr>
+				{%endfor%}
+				{%endif%}
+				</table>	
+			</div>
+		</div>
+
+
+
+		<div class="ft">
+      <footer>
+	           <p>&copy 2018-2019 company ltd<p>
+	  
+	  </footer>
+ </div> 
+</body>
+</html>		
